@@ -6,7 +6,7 @@ jobs:
   build_and_push:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: mddo_ansible_runner
+      IMAGE_NAME: mddo-ansible-runner
     permissions:
       contents: read
       packages: write
@@ -18,8 +18,8 @@ jobs:
 
       - name: create ansible-builder Dockerfile
         run: |
-          git clone https://github.com/ool-mddo/mddo-ansible-runner.git
-          cd mddo-ansible-runner
+          git clone https://github.com/ool-mddo/${{ env.IMAGE_NAME }}.git
+          cd ${{ env.IMAGE_NAME }}
           ansible-builder create
 
       - name: checkout

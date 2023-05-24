@@ -23,7 +23,6 @@ RUN assemble
 
 FROM $EE_BASE_IMAGE
 USER root
-RUN whoami
 RUN cat /etc/os-release
 
 COPY --from=galaxy /usr/share/ansible /usr/share/ansible
@@ -31,4 +30,5 @@ COPY --from=galaxy /usr/share/ansible /usr/share/ansible
 COPY --from=builder /output/ /output/
 RUN /output/install-from-bindep && rm -rf /output/wheels
 RUN echo This is a post-install command!
-RUN ls -la /etc
+RUN python3 -m pip install -U --user ansible-core==2.14.5
+RUN ansible --version

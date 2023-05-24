@@ -18,6 +18,7 @@ jobs:
 
       - name: create ansible-builder Dockerfile
         run: |
+          cd ../
           pwd
           ls -al
           ansible-builder create

@@ -30,5 +30,5 @@ COPY --from=galaxy /usr/share/ansible /usr/share/ansible
 COPY --from=builder /output/ /output/
 RUN /output/install-from-bindep && rm -rf /output/wheels
 RUN echo This is a post-install command!
-RUN python3 -m pip install -U --user ansible-core==2.14.5
+RUN python3 -m pip install -U ansible-core==2.13.10
 RUN ansible --version

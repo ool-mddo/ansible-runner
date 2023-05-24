@@ -18,9 +18,8 @@ jobs:
 
       - name: create ansible-builder Dockerfile
         run: |
-          cd ../
-          pwd
-          ls -al
+          git clone https://github.com/ool-mddo/mddo-ansible-runner.git
+          cd mddo-ansible-runner
           ansible-builder create
 
       - name: checkout

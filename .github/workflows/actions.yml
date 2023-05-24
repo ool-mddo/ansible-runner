@@ -6,7 +6,7 @@ jobs:
   build_and_push:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: mddo-ansible-runner
+      IMAGE_NAME: mddo_ansible_runner
     permissions:
       contents: read
       packages: write

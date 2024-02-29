@@ -73,5 +73,9 @@ ansible-runner run . -p /data/project/playbooks/test.yaml
 - --container-option="--net=${API_BRIDGE}" <br>
   ansible-runnerを実行する際のansible-runnerの動作設定を指定できる<br>
   上記例はansible-runnerのコンテナを起動する際につながる仮想ブリッジ名を指定している
+- --container-volume-mount="{{ホスト上のディレクトリパス}}:{{コンテナ上のディレクトリパス}}"<br>
+  ansible-runner上へマウントしたいディレクトリを指定する
+- --container-image="${ANSIBLERUNNER_IMAGE}"
+  ansible-runnerのコンテナイメージを指定する
 - --cmdline "-e login_user=${LOCALSERVER_USER}"<br>
   ansible-runnerを実行する際に、playbookへ渡す引数を指定できる。

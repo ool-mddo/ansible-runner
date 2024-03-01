@@ -1,4 +1,3 @@
----
 # 使い方
 ansible-builder version 3<br>
 ansible-core 2.14.4
@@ -18,9 +17,9 @@ ansible-core 2.14.4
 - context/configs/ansible.cfg<br>
   ansible-runnerコンテナ内に組み込むansibleの設定ファイルのansible.cfgを格納しておく
 - .github/workflows/actions.yml<br>
-  GithubActionsにてansible-runnerのコンテナイメージをビルドするActionsの定義
+  GithubActionsにてansible-runnerのコンテナイメージをビルドするActionsの定義(Ansible Builder v2系まで動作、v3系はTBD)
 
-## Github ActionsにてAnsible-Runnerのイメージビルド
+## Ansible-Runnerのイメージビルド
 ### ansible-builderを利用してDockerfileを生成する
 ```
 git clone https://github.com/ool-mddo/mddo-ansible-runner.git
@@ -75,7 +74,7 @@ ansible-runner run . -p /data/project/playbooks/test.yaml
   上記例はansible-runnerのコンテナを起動する際につながる仮想ブリッジ名を指定している
 - --container-volume-mount="{{ホスト上のディレクトリパス}}:{{コンテナ上のディレクトリパス}}"<br>
   ansible-runner上へマウントしたいディレクトリを指定する
-- --container-image="${ANSIBLERUNNER_IMAGE}"
+- --container-image="${ANSIBLERUNNER_IMAGE}"<br>
   ansible-runnerのコンテナイメージを指定する
 - --cmdline "-e login_user=${LOCALSERVER_USER}"<br>
   ansible-runnerを実行する際に、playbookへ渡す引数を指定できる。

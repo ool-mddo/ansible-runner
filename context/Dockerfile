@@ -3,7 +3,7 @@ ARG PYCMD="/usr/bin/python3"
 ARG PKGMGR_PRESERVE_CACHE=""
 ARG ANSIBLE_GALAXY_CLI_COLLECTION_OPTS="--pre"
 ARG ANSIBLE_GALAXY_CLI_ROLE_OPTS=""
-ARG ANSIBLE_INSTALL_REFS="ansible-core==2.14.4 ansible-runner"
+ARG ANSIBLE_INSTALL_REFS="ansible-core==2.15.9 ansible-runner"
 ARG PKGMGR="/usr/bin/dnf"
 
 # Base build stage

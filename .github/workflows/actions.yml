@@ -20,6 +20,7 @@ jobs:
         run: |
           git clone https://github.com/ool-mddo/${{ env.IMAGE_NAME }}.git
           cd ${{ env.IMAGE_NAME }}
+          cp requirements.* context/_build/
           ansible-builder create
 
       - name: checkout

@@ -5,4 +5,5 @@ pynetbox
 ttp
 ansible-pylibssh
 xmltodict
-
+six
+psutil

@@ -11,6 +11,13 @@ dependencies:
     package_pip: ansible-runner
   galaxy: requirements.yml
   python:
+    - paramiko
+    - jmespath
+    - netaddr
+    - pynetbox
+    - ttp
+    - ansible-pylibssh
+    - xmltodict
     - six
     - psutil
   system: bindep.txt

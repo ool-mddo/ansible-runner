@@ -6,11 +6,18 @@ build_arg_defaults:
 
 dependencies:
   ansible_core:
-    package_pip: ansible-core==2.14.4
+    package_pip: ansible-core==2.15.9
   ansible_runner:
     package_pip: ansible-runner
   galaxy: requirements.yml
   python:
+    - paramiko
+    - jmespath
+    - netaddr
+    - pynetbox
+    - ttp
+    - ansible-pylibssh
+    - xmltodict
     - six
     - psutil
   system: bindep.txt
